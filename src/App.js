@@ -40,7 +40,6 @@ function App() {
           <Route path="done/:user_id" element={<Done />} />
           <Route path="place/:place_id" element={<Place />} />
         </Route>
-          <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </Container>
     </div>
