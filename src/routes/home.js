@@ -42,7 +42,7 @@ function Element() {
         const id = params.get('id');
         localStorage.setItem("access_token", token);
         const redirectLanguage = localStorage.getItem("language") || 'en';
-        window.location.href = `/GlobeTrek/${redirectLanguage}/home/${id}`;
+        window.location.href = `/GlobeTrek-front/#/${redirectLanguage}/home/${id}`;
       }
 
       const token = localStorage.getItem("access_token");
@@ -58,7 +58,7 @@ function Element() {
 
         if (response.status === 401 || !response.ok){
           alert(t("Unauthorized, please login."))
-          window.location.href = `/GlobeTrek/${language}/login`;
+          window.location.href = `/GlobeTrek-front/#/${language}/login`;
           return;
         }
         
@@ -253,7 +253,7 @@ function Element() {
                             key={country.id}
                             onClick={() => {
                               navigate(
-                                `/GlobeTrek/${language}/place/${country.id}`
+                                `/GlobeTrek-front/#/${language}/place/${country.id}`
                               );
                             }}
                             sx={{
@@ -343,7 +343,7 @@ function Element() {
                         );
                       }
                       const data = await response.json();
-                      navigate(`/GlobeTrek/${language}/place/${data._id}`);
+                      navigate(`/GlobeTrek-front/#/${language}/place/${data._id}`);
                     } catch (error) {
                       console.error(
                         'Error creating itinerary:',
