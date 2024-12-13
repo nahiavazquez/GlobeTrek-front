@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/GlobeTrek-front/static/css/main.c2f05e24.css",
-    "main.js": "/GlobeTrek-front/static/js/main.394b2fe9.js",
+    "main.js": "/GlobeTrek-front/static/js/main.bcbbfa6b.js",
     "static/js/453.475a6556.chunk.js": "/GlobeTrek-front/static/js/453.475a6556.chunk.js",
     "index.html": "/GlobeTrek-front/index.html",
     "main.c2f05e24.css.map": "/GlobeTrek-front/static/css/main.c2f05e24.css.map",
-    "main.394b2fe9.js.map": "/GlobeTrek-front/static/js/main.394b2fe9.js.map",
+    "main.bcbbfa6b.js.map": "/GlobeTrek-front/static/js/main.bcbbfa6b.js.map",
     "453.475a6556.chunk.js.map": "/GlobeTrek-front/static/js/453.475a6556.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c2f05e24.css",
-    "static/js/main.394b2fe9.js"
+    "static/js/main.bcbbfa6b.js"
   ]
 }
