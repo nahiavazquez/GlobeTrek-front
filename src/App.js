@@ -17,7 +17,7 @@ function ValidateLanguage() {
   const { language } = useParams();
 
   if (!allowedLanguages.includes(language)) {
-    return window.location.href = "/GlobeTrek/en/login";
+    return window.location.href = "/GlobeTrek-front/#/en/login";
   }
 
   return <Outlet />;
