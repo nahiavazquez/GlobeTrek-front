@@ -28,7 +28,7 @@ function App() {
     <div>
       <Container>
         <Routes>
-        <Route path="/GlobeTrek/:language" element={<ValidateLanguage />}>
+        <Route path="/:language" element={<ValidateLanguage />}>
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="new_password" element={<NewPassword />} />
@@ -40,7 +40,7 @@ function App() {
           <Route path="done/:user_id" element={<Done />} />
           <Route path="place/:place_id" element={<Place />} />
         </Route>
-          <Route path="/GlobeTrek/*" element={<ErrorPage />} />
+          <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </Container>
     </div>
