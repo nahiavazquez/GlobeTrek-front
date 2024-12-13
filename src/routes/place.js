@@ -177,7 +177,7 @@ function Place() {
             });
             if (response.status === 401){
                 alert(t("Unauthorized, please login."))
-                window.location.href = `/GlobeTrek/${language}/login`;
+                window.location.href = `/GlobeTrek-front/#/${language}/login`;
                 return;
             }
 
@@ -266,7 +266,7 @@ function Place() {
                         } catch (error) {
                         }
                         alert(t("Itinerary removed"))
-                        navigate(`/GlobeTrek/${language}/home/${itinerary.owner}`);
+                        navigate(`/GlobeTrek-front/#/${language}/home/${itinerary.owner}`);
                     }}
                     >{t('Remove')}</Button>
                 </Box>
