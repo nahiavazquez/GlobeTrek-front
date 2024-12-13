@@ -118,7 +118,7 @@ export default function SignUp() {
       const loginData = await loginResponse.json();
     
       localStorage.setItem("access_token", loginData.access_token);
-      window.location.href = `/Globetrek/${language}/home/${loginData.user_id}`;
+      window.location.href = `/GlobeTrek-front/#/${language}/home/${loginData.user_id}`;
     } catch (error) {
       console.error('Request error:', error);
     }
@@ -190,7 +190,7 @@ export default function SignUp() {
             </FormControl>
             <Button type="submit" fullWidth variant="contained">{t('Sign up')}</Button>
             <Typography sx={{ textAlign: 'center' }}>
-              {t('Already have an account?')} <Link href={`/GlobeTrek/${language}/login`}>{t('Sign in')}</Link>
+              {t('Already have an account?')} <Link href={`/GlobeTrek-front/#/${language}/login`}>{t('Sign in')}</Link>
             </Typography>
           </Box>
           <Divider>
