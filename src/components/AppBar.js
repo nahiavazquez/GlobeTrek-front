@@ -130,11 +130,11 @@ export const GTAppBar = ({ user_id = "", withMenu=true }) => {
   const handleDialogClose = () => setOpenDialog(false);
   const handleUnauthorizedDialogClose = () => {
     setUnauthorizedDialog(false) 
-    window.location.href = `/GlobeTrek/${language}/login`;};
+    window.location.href = `/GlobeTrek-front/#/${language}/login`;};
   const handleConfirmRemoveDialogClose = () => setConfirmRemoveDialog(false);
   const handleConfirmItinerariesRemoveDialogClose = () => {
     setConfirmItinerariesRemoveDialog(false)
-    window.location.href = `/GlobeTrek/${language}/login`;
+    window.location.href = `/GlobeTrek-front/#/${language}/login`;
   };
 
   const handleLanguageMenuClick = (event) => {
@@ -146,16 +146,16 @@ export const GTAppBar = ({ user_id = "", withMenu=true }) => {
     i18n.changeLanguage(language);
     setAnchorElLanguage(null);
     const currentPath = window.location.pathname.split('/').slice(3).join('/');
-    navigate(`/GlobeTrek/${language}/${currentPath}`);
+    navigate(`/GlobeTrek-front/#/${language}/${currentPath}`);
   };
 
   const handleLogout = () => {
     localStorage.removeItem('access_token');
-    navigate(`/GlobeTrek/${language}/login`);
+    navigate(`/GlobeTrek-front/#/${language}/login`);
   };
 
   const handleChangePassword = () => {
-    navigate(`/GlobeTrek/${language}/new_password/${user_id}`);
+    navigate(`/GlobeTrek-front/#/${language}/new_password/${user_id}`);
   };
 
   const handleRemoveAccount = () => setOpenDialog(true);
@@ -222,7 +222,7 @@ export const GTAppBar = ({ user_id = "", withMenu=true }) => {
           )}
           </IconButton>
           <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <img src={GlobeTrekLogo} alt="GlobeTrek Logo" onClick={() => {navigate(`/GlobeTrek/${language}/home/${user_id}`)}}/>
+          <img src={GlobeTrekLogo} alt="GlobeTrek Logo" onClick={() => {navigate(`/GlobeTrek-front/#/${language}/home/${user_id}`)}}/>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
               <IconButton color="inherit" onClick={handleLanguageMenuClick}>
                 <LanguageIcon sx={{ 'color': 'grey' }} />
@@ -313,7 +313,7 @@ export const GTAppBar = ({ user_id = "", withMenu=true }) => {
                         );
                       }
                       const data = await response.json();
-                      navigate(`/GlobeTrek/${language}/place/${data._id}`);
+                      navigate(`/GlobeTrek-front/#/${language}/place/${data._id}`);
                     } catch (error) {
                       console.error(
                         'Error creating itinerary:',
@@ -321,11 +321,11 @@ export const GTAppBar = ({ user_id = "", withMenu=true }) => {
                       );
                     }
                   } else if (text === t("Planning")) {
-                    navigate(`/GlobeTrek/${language}/planning/${user_id}`);
+                    navigate(`/GlobeTrek-front/#/${language}/planning/${user_id}`);
                   } else if (text === t("Planned")) {
-                    navigate(`/GlobeTrek/${language}/planned/${user_id}`);
+                    navigate(`/GlobeTrek-front/#/${language}/planned/${user_id}`);
                   } else {
-                    navigate(`/GlobeTrek/${language}/done/${user_id}`);
+                    navigate(`/GlobeTrek-front/#/${language}/done/${user_id}`);
                   }                
                 }}
               >
@@ -357,20 +357,20 @@ export const GTAppBar = ({ user_id = "", withMenu=true }) => {
                         throw new Error('Network response was not ok ' + response.statusText);
                         }
                         const data = await response.json();
-                        navigate(`/GlobeTrek/${language}/place/${data._id}`)
+                        navigate(`/GlobeTrek-front/#/${language}/place/${data._id}`)
                 
                     } catch (error) {
                         console.error('Error fetching creating itinerary:', error);
                     }
                       }} />}
                       {index === 1 && <DrawIcon onClick={() => {
-                      navigate(`/GlobeTrek/${language}/planning/${user_id}`)
+                      navigate(`/GlobeTrek-front/#/${language}/planning/${user_id}`)
                       }}/>}
                       {index === 2 && <ChecklistRtlIcon onClick={() => {
-                      navigate(`/GlobeTrek/${language}/planned/${user_id}`)
+                      navigate(`/GlobeTrek-front/#/${language}/planned/${user_id}`)
                       }}/>}
                       {index === 3 && <CheckCircleOutlineIcon onClick={() => {
-                      navigate(`/GlobeTrek/${language}/done/${user_id}`)
+                      navigate(`/GlobeTrek-front/#/${language}/done/${user_id}`)
                       }}/>}
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: openDrawer ? 1 : 0 }} />
